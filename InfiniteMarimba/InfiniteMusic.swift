@@ -9,17 +9,22 @@
 import Foundation
 import AVFoundation
 
+
 class InfiniteMusic : NSObject, AVAudioPlayerDelegate {
     var avPlayer : AVAudioPlayer?
     var initialized = false
     var progressionInt : Int = 0
     
-    func playNote(note: String){
-        print("trying to find \(note)")
-        let fileURL = NSBundle.mainBundle().URLForResource(note, withExtension: ".m4a")
-        print(fileURL)
+    func playNote(note: String) throws {
+        guard let fileURL = NSBundle.mainBundle().URLForResource(note, withExtension: ".m4a") else {
+            print("Failed to find resource for note: \(note)")
+            return
+        }
+        
+        print("Found resource for note: \(note) at: \(fileURL)")
+        
         do {
-            try avPlayer = AVAudioPlayer(contentsOfURL: fileURL!)
+            try avPlayer = AVAudioPlayer(contentsOfURL: fileURL)
         } catch {
             print("could not create AVAudioPlayer \(error)")
             return

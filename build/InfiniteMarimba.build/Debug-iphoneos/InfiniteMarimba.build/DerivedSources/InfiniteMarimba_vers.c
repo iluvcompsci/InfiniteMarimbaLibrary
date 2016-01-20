@@ -1,0 +1,1 @@
+ const unsigned char InfiniteMarimbaVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:InfiniteMarimba  PROJECT:InfiniteMarimba-1" "\n"; const double InfiniteMarimbaVersionNumber __attribute__ ((used)) = (double)1.;

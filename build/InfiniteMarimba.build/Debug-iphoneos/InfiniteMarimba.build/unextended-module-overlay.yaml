@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/blisschapman/Library/Developer/Xcode/DerivedData/InfiniteMarimba-ffqqxrysddvgvadgjwilkjasicbg/Build/Products/Debug-iphoneos/InfiniteMarimba.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/blisschapman/Developer/iOS/InfiniteMarimbaLibrary/build/InfiniteMarimba.build/Debug-iphoneos/InfiniteMarimba.build/unextended-module.modulemap',
+    }]
+  }]
+}

@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A54FA1A41C5004CF007BBA99 /* Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A54FA1A71C5004CF007BBA99 /* Build configuration list for PBXAggregateTarget "Aggregate" */;
+			buildPhases = (
+				A54FA1A81C5004E1007BBA99 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Aggregate;
+			productName = Aggregate;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		702DD04D1C4F010F00D7CA46 /* InfiniteMarimba.h in Headers */ = {isa = PBXBuildFile; fileRef = 702DD04C1C4F010F00D7CA46 /* InfiniteMarimba.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		702DD1561C4F021C00D7CA46 /* InfiniteMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702DD1551C4F021C00D7CA46 /* InfiniteMusic.swift */; };
@@ -463,6 +477,29 @@
 				702DD1571C4F345200D7CA46 /* testMusic.swift */,
 				702DD1551C4F021C00D7CA46 /* InfiniteMusic.swift */,
 				702DD04E1C4F010F00D7CA46 /* Info.plist */,
+				A54FA1A91C5004F4007BBA99 /* Notes */,
+			);
+			path = InfiniteMarimba;
+			sourceTree = "<group>";
+		};
+		702DD15E1C4F378400D7CA46 /* InfiniteMarimbaTests */ = {
+			isa = PBXGroup;
+			children = (
+				702DD1611C4F378400D7CA46 /* Info.plist */,
+			);
+			path = InfiniteMarimbaTests;
+			sourceTree = "<group>";
+		};
+		702DD2F11C4F589000D7CA46 /* marimba notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "marimba notes";
+			sourceTree = "<group>";
+		};
+		A54FA1A91C5004F4007BBA99 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
 				702DD1711C4F587A00D7CA46 /* A#1.m4a */,
 				702DD1721C4F587A00D7CA46 /* A#2.m4a */,
 				702DD1731C4F587A00D7CA46 /* A#3.m4a */,
@@ -592,22 +629,7 @@
 				702DD1EF1C4F587B00D7CA46 /* G10.m4a */,
 				702DD1F01C4F587B00D7CA46 /* G11.m4a */,
 			);
-			path = InfiniteMarimba;
-			sourceTree = "<group>";
-		};
-		702DD15E1C4F378400D7CA46 /* InfiniteMarimbaTests */ = {
-			isa = PBXGroup;
-			children = (
-				702DD1611C4F378400D7CA46 /* Info.plist */,
-			);
-			path = InfiniteMarimbaTests;
-			sourceTree = "<group>";
-		};
-		702DD2F11C4F589000D7CA46 /* marimba notes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "marimba notes";
+			name = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +698,9 @@
 					702DD15C1C4F378400D7CA46 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					A54FA1A41C5004CF007BBA99 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 702DD0431C4F010F00D7CA46 /* Build configuration list for PBXProject "InfiniteMarimba" */;
@@ -692,6 +717,7 @@
 			targets = (
 				702DD0481C4F010F00D7CA46 /* InfiniteMarimba */,
 				702DD15C1C4F378400D7CA46 /* InfiniteMarimbaTests */,
+				A54FA1A41C5004CF007BBA99 /* Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -969,6 +995,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A54FA1A81C5004E1007BBA99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		702DD0441C4F010F00D7CA46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1142,6 +1184,20 @@
 			};
 			name = Release;
 		};
+		A54FA1A51C5004CF007BBA99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A54FA1A61C5004CF007BBA99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1161,12 +1217,22 @@
 				702DD0531C4F010F00D7CA46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		702DD1651C4F378400D7CA46 /* Build configuration list for PBXNativeTarget "InfiniteMarimbaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				702DD1661C4F378400D7CA46 /* Debug */,
 				702DD1671C4F378400D7CA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A54FA1A71C5004CF007BBA99 /* Build configuration list for PBXAggregateTarget "Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54FA1A51C5004CF007BBA99 /* Debug */,
+				A54FA1A61C5004CF007BBA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

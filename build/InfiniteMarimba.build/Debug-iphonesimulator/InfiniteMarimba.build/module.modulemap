@@ -1,0 +1,10 @@
+framework module InfiniteMarimba {
+  umbrella header "InfiniteMarimba.h"
+
+  export *
+  module * { export * }
+}
+
+module InfiniteMarimba.Swift {
+    header "InfiniteMarimba-Swift.h"
+}

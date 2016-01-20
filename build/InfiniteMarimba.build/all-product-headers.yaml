@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/blisschapman/Library/Developer/Xcode/DerivedData/InfiniteMarimba-ffqqxrysddvgvadgjwilkjasicbg/Build/Products/Debug-iphonesimulator/InfiniteMarimba.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "InfiniteMarimba-Swift.h",
+          'external-contents': "/Users/blisschapman/Library/Developer/Xcode/DerivedData/InfiniteMarimba-ffqqxrysddvgvadgjwilkjasicbg/Build/Products/Debug-iphonesimulator/InfiniteMarimba.framework/Headers/InfiniteMarimba-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "InfiniteMarimba.h",
+          'external-contents': "/Users/blisschapman/Developer/iOS/InfiniteMarimbaLibrary/InfiniteMarimba/InfiniteMarimba.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/blisschapman/Library/Developer/Xcode/DerivedData/InfiniteMarimba-ffqqxrysddvgvadgjwilkjasicbg/Build/Products/Debug-iphonesimulator/InfiniteMarimba.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/blisschapman/Developer/iOS/InfiniteMarimbaLibrary/build/InfiniteMarimba.build/Debug-iphonesimulator/InfiniteMarimba.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

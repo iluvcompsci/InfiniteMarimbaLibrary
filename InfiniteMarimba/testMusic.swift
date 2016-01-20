@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import InfiniteMarimba
 
 class testMusic: XCTestCase {
 

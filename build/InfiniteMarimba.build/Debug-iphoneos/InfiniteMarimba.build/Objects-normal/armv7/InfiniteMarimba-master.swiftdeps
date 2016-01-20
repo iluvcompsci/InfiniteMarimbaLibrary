@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "bf5d825591b643ec11d0aa52edde410e"
+build_time: [506628899, 158983000]
+inputs:
+  "/Users/blisschapman/Developer/iOS/InfiniteMarimbaLibrary/InfiniteMarimba/InfiniteMusic.swift": [506628787, 0]
