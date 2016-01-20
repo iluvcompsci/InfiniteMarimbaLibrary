@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>InfiniteMarimbaTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>702DD0481C4F010F00D7CA46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>702DD15C1C4F378400D7CA46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
