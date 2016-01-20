@@ -6,102 +6,104 @@ provides-nominal:
 provides-member:
 - ["C15InfiniteMarimba13InfiniteMusic", ""]
 provides-dynamic-lookup:
-- "emajorscale"
-- "dsharpmajorscale"
-- "keygmajor"
-- "cminor"
-- "asharpmajor"
-- "aminor"
-- "fsharpmajorscale"
-- "fmajorscale"
-- "fmajor"
-- "gminor"
-- "gmajor"
-- "cmajorscale"
-- "chooseProgression"
-- "dmajorscale"
-- "dminor"
-- "keyaminor"
-- "toggleAVPlayer"
-- "csharpmajorscale"
-- "keyeminor"
-- "initialized"
-- "scales"
-- "keydsharpmajor"
-- "cmajor"
 - "keybmajor"
-- "dsharpmajor"
-- "aminorscale"
-- "audioPlayerDidFinishPlaying"
-- "keycmajor"
-- "keybminor"
-- "eminor"
-- "bminor"
-- "amajor"
-- "nextMelodyNote"
-- "avPlayer"
-- "fsharpminor"
-- "dmajor"
-- "audioPlayerDecodeErrorDidOccur"
-- "bminorscale"
-- "stopAVPLayer"
-- "keyfmajor"
-- "keydmajor"
-- "keycminor"
-- "keyfminor"
-- "progressionInt"
-- "keygsharpmajor"
-- "eminorscale"
-- "keyamajor"
+- "fsharpmajor"
+- "bmajor"
+- "cminorscale"
+- "fminor"
 - "dminorscale"
-- "prepareMusicTheory"
-- "gminorscale"
-- "csharpminor"
-- "asharpminor"
-- "fminorscale"
-- "keyfsharpmajor"
-- "bmajorscale"
-- "keygminor"
-- "asharpmajorscale"
+- "gmajor"
 - "gsharpminor"
 - "gsharpmajor"
-- "bmajor"
-- "fminor"
-- "cminorscale"
-- "keys"
-- "emajor"
-- "fsharpmajor"
+- "eminorscale"
 - "csharpmajor"
-- "keydminor"
-- "gmajorscale"
-- "dsharpminor"
 - "keyemajor"
-- "amajorscale"
-- "playNote"
-- "keycsharpmajor"
-- "keyasharpmajor"
 - "gsharpmajorscale"
+- "nextMelodyNote"
+- "keybminor"
+- "amajorscale"
+- "asharpmajorscale"
+- "asharpminor"
+- "keygmajor"
+- "bmajorscale"
+- "dsharpminor"
+- "emajor"
+- "dmajor"
+- "prepareMusicTheory"
+- "audioPlayerDecodeErrorDidOccur"
+- "stopAVPLayer"
+- "fsharpminor"
+- "keyfmajor"
+- "fminorscale"
+- "keygsharpmajor"
+- "gminorscale"
+- "aminorscale"
+- "keydmajor"
+- "csharpminor"
+- "audioPlayerDidFinishPlaying"
+- "playNote"
+- "keyeminor"
+- "bminorscale"
+- "keygminor"
+- "keyfsharpmajor"
+- "keydsharpmajor"
+- "keyaminor"
+- "keycmajor"
+- "scales"
+- "dminor"
+- "cmajorscale"
+- "keys"
+- "cmajor"
+- "bminor"
+- "progressionInt"
+- "keydminor"
+- "keyasharpmajor"
+- "amajor"
+- "fmajorscale"
+- "initialized"
+- "fsharpmajorscale"
+- "asharpmajor"
+- "keycsharpmajor"
+- "toggleAVPlayer"
+- "gmajorscale"
+- "keycminor"
+- "keyfminor"
+- "csharpmajorscale"
+- "cminor"
+- "fmajor"
+- "dmajorscale"
+- "gminor"
+- "keyamajor"
+- "dsharpmajorscale"
+- "aminor"
+- "chooseProgression"
+- "avPlayer"
+- "dsharpmajor"
+- "eminor"
+- "emajorscale"
 depends-top-level:
 - !private "+"
 - "NSError"
 - "Int"
-- !private "Double"
+- !private "Dictionary"
 - "Array"
-- "InfiniteMusic"
-- "BooleanLiteralType"
-- "UnicodeScalarType"
 - !private "UInt32"
-- !private "arc4random_uniform"
 - !private "print"
-- "String"
-- !private "*"
+- "InfiniteMusic"
+- "Bool"
+- "BooleanLiteralType"
 - !private "!"
-- "AVAudioPlayer"
-- "StringLiteralType"
+- !private "Double"
+- "UnicodeScalarType"
 - !private "NSBundle"
+- "String"
+- "AVAudioPlayer"
+- !private "arc4random_uniform"
+- "StringLiteralType"
 - "NSObject"
 - "AVAudioPlayerDelegate"
-- "Bool"
+- !private "NSLocalizedDescriptionKey"
+- !private "*"
 depends-member:
 - !private ["CSo13AVAudioPlayer", "delegate"]
 - !private ["CSo13AVAudioPlayer", "init"]
@@ -113,8 +115,11 @@ depends-member:
 - !private ["CSo13AVAudioPlayer", "volume"]
 - !private ["PSo21AVAudioPlayerDelegate", "AVAudioPlayer"]
 - !private ["PSo21AVAudioPlayerDelegate", "Double"]
+- !private ["PSo21AVAudioPlayerDelegate", "InfiniteMusic"]
 - !private ["PSo21AVAudioPlayerDelegate", "Int"]
 - !private ["PSo21AVAudioPlayerDelegate", "NSBundle"]
+- !private ["PSo21AVAudioPlayerDelegate", "NSError"]
+- !private ["PSo21AVAudioPlayerDelegate", "NSLocalizedDescriptionKey"]
 - !private ["PSo21AVAudioPlayerDelegate", "UInt32"]
 - !private ["PSo21AVAudioPlayerDelegate", "amajor"]
 - !private ["PSo21AVAudioPlayerDelegate", "amajorscale"]
@@ -165,6 +170,7 @@ depends-member:
 - !private ["PSo21AVAudioPlayerDelegate", "gsharpmajor"]
 - !private ["PSo21AVAudioPlayerDelegate", "gsharpmajorscale"]
 - !private ["PSo21AVAudioPlayerDelegate", "gsharpminor"]
+- !private ["PSo21AVAudioPlayerDelegate", "initAudioPlayer"]
 - !private ["PSo21AVAudioPlayerDelegate", "initialized"]
 - !private ["PSo21AVAudioPlayerDelegate", "keyamajor"]
 - !private ["PSo21AVAudioPlayerDelegate", "keyaminor"]
@@ -194,8 +200,11 @@ depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "AVAudioPlayer"]
 - !private ["PSs9AnyObject", "Double"]
+- !private ["PSs9AnyObject", "InfiniteMusic"]
 - !private ["PSs9AnyObject", "Int"]
 - !private ["PSs9AnyObject", "NSBundle"]
+- !private ["PSs9AnyObject", "NSError"]
+- !private ["PSs9AnyObject", "NSLocalizedDescriptionKey"]
 - !private ["PSs9AnyObject", "UInt32"]
 - !private ["PSs9AnyObject", "URLForResource"]
 - ["PSs9AnyObject", "amajor"]
@@ -223,6 +232,7 @@ depends-member:
 - ["PSs9AnyObject", "csharpmajor"]
 - ["PSs9AnyObject", "csharpmajorscale"]
 - ["PSs9AnyObject", "csharpminor"]
+- !private ["PSs9AnyObject", "deinit"]
 - !private ["PSs9AnyObject", "delegate"]
 - ["PSs9AnyObject", "dmajor"]
 - ["PSs9AnyObject", "dmajorscale"]
@@ -250,6 +260,7 @@ depends-member:
 - ["PSs9AnyObject", "gsharpmajorscale"]
 - ["PSs9AnyObject", "gsharpminor"]
 - ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "initAudioPlayer"]
 - ["PSs9AnyObject", "initialized"]
 - ["PSs9AnyObject", "keyamajor"]
 - ["PSs9AnyObject", "keyaminor"]
@@ -272,7 +283,6 @@ depends-member:
 - ["PSs9AnyObject", "keygsharpmajor"]
 - ["PSs9AnyObject", "keys"]
 - !private ["PSs9AnyObject", "localizedDescription"]
-- !private ["PSs9AnyObject", "mainBundle"]
 - ["PSs9AnyObject", "nextMelodyNote"]
 - !private ["PSs9AnyObject", "pause"]
 - !private ["PSs9AnyObject", "play"]
@@ -316,9 +326,12 @@ depends-member:
 - !private ["PSs11CVarArgType", "AVAudioPlayer"]
 - !private ["PSs11CVarArgType", "Distance"]
 - !private ["PSs11CVarArgType", "Double"]
+- !private ["PSs11CVarArgType", "InfiniteMusic"]
 - !private ["PSs11CVarArgType", "Int"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSBundle"]
+- !private ["PSs11CVarArgType", "NSError"]
+- !private ["PSs11CVarArgType", "NSLocalizedDescriptionKey"]
 - !private ["PSs11CVarArgType", "UInt32"]
 - !private ["PSs11CVarArgType", "URLForResource"]
 - ["PSs11CVarArgType", "amajor"]
@@ -373,6 +386,7 @@ depends-member:
 - ["PSs11CVarArgType", "gsharpmajorscale"]
 - ["PSs11CVarArgType", "gsharpminor"]
 - ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "initAudioPlayer"]
 - ["PSs11CVarArgType", "initialized"]
 - ["PSs11CVarArgType", "keyamajor"]
 - ["PSs11CVarArgType", "keyaminor"]
@@ -395,7 +409,6 @@ depends-member:
 - ["PSs11CVarArgType", "keygsharpmajor"]
 - ["PSs11CVarArgType", "keys"]
 - !private ["PSs11CVarArgType", "localizedDescription"]
-- !private ["PSs11CVarArgType", "mainBundle"]
 - ["PSs11CVarArgType", "nextMelodyNote"]
 - !private ["PSs11CVarArgType", "pause"]
 - !private ["PSs11CVarArgType", "play"]
@@ -415,7 +428,9 @@ depends-member:
 - ["PSs14CollectionType", "Element"]
 - !private ["PSs14CollectionType", "Generator"]
 - !private ["PSs14CollectionType", "Index"]
+- !private ["PSs14CollectionType", "Key"]
 - !private ["PSs14CollectionType", "SubSequence"]
+- !private ["PSs14CollectionType", "Value"]
 - !private ["PSs14CollectionType", "_Element"]
 - !private ["PSs14CollectionType", "count"]
 - !private ["PSs14CollectionType", "subscript"]
@@ -425,8 +440,10 @@ depends-member:
 - ["PSs28CustomDebugStringConvertible", "Element"]
 - !private ["PSs28CustomDebugStringConvertible", "Generator"]
 - !private ["PSs28CustomDebugStringConvertible", "Index"]
+- !private ["PSs28CustomDebugStringConvertible", "Key"]
 - ["PSs28CustomDebugStringConvertible", "Some"]
 - !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
+- !private ["PSs28CustomDebugStringConvertible", "Value"]
 - !private ["PSs28CustomDebugStringConvertible", "count"]
 - !private ["PSs28CustomDebugStringConvertible", "init"]
 - !private ["PSs28CustomDebugStringConvertible", "subscript"]
@@ -436,12 +453,17 @@ depends-member:
 - ["PSs23CustomStringConvertible", "Element"]
 - !private ["PSs23CustomStringConvertible", "Generator"]
 - !private ["PSs23CustomStringConvertible", "Index"]
+- !private ["PSs23CustomStringConvertible", "InfiniteMusic"]
 - !private ["PSs23CustomStringConvertible", "Int"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["PSs23CustomStringConvertible", "Key"]
 - !private ["PSs23CustomStringConvertible", "NSBundle"]
+- !private ["PSs23CustomStringConvertible", "NSError"]
+- !private ["PSs23CustomStringConvertible", "NSLocalizedDescriptionKey"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "UInt32"]
 - !private ["PSs23CustomStringConvertible", "URLForResource"]
+- !private ["PSs23CustomStringConvertible", "Value"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["PSs23CustomStringConvertible", "amajor"]
 - ["PSs23CustomStringConvertible", "amajorscale"]
@@ -496,6 +518,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "gsharpmajorscale"]
 - ["PSs23CustomStringConvertible", "gsharpminor"]
 - ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "initAudioPlayer"]
 - ["PSs23CustomStringConvertible", "initialized"]
 - ["PSs23CustomStringConvertible", "keyamajor"]
 - ["PSs23CustomStringConvertible", "keyaminor"]
@@ -518,7 +541,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", "keygsharpmajor"]
 - ["PSs23CustomStringConvertible", "keys"]
 - !private ["PSs23CustomStringConvertible", "localizedDescription"]
-- !private ["PSs23CustomStringConvertible", "mainBundle"]
 - ["PSs23CustomStringConvertible", "nextMelodyNote"]
 - !private ["PSs23CustomStringConvertible", "pause"]
 - !private ["PSs23CustomStringConvertible", "play"]
@@ -535,14 +557,21 @@ depends-member:
 - ["PSs23CustomStringConvertible", "toggleAVPlayer"]
 - !private ["PSs23CustomStringConvertible", "volume"]
 - ["PSs23CustomStringConvertible", ""]
+- !private ["VSs10Dictionary", "Key"]
+- !private ["VSs10Dictionary", "Value"]
+- !private ["PSs28DictionaryLiteralConvertible", "Key"]
+- !private ["PSs28DictionaryLiteralConvertible", "Value"]
 - !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["PSs9Equatable", "AVAudioPlayer"]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "Double"]
+- !private ["PSs9Equatable", "InfiniteMusic"]
 - !private ["PSs9Equatable", "Int"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSBundle"]
+- !private ["PSs9Equatable", "NSError"]
+- !private ["PSs9Equatable", "NSLocalizedDescriptionKey"]
 - !private ["PSs9Equatable", "UInt32"]
 - !private ["PSs9Equatable", "URLForResource"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
@@ -598,6 +627,7 @@ depends-member:
 - ["PSs9Equatable", "gsharpmajorscale"]
 - ["PSs9Equatable", "gsharpminor"]
 - ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "initAudioPlayer"]
 - ["PSs9Equatable", "initialized"]
 - ["PSs9Equatable", "keyamajor"]
 - ["PSs9Equatable", "keyaminor"]
@@ -620,7 +650,6 @@ depends-member:
 - ["PSs9Equatable", "keygsharpmajor"]
 - ["PSs9Equatable", "keys"]
 - !private ["PSs9Equatable", "localizedDescription"]
-- !private ["PSs9Equatable", "mainBundle"]
 - ["PSs9Equatable", "nextMelodyNote"]
 - !private ["PSs9Equatable", "pause"]
 - !private ["PSs9Equatable", "play"]
@@ -636,6 +665,7 @@ depends-member:
 - ["PSs9Equatable", "toggleAVPlayer"]
 - !private ["PSs9Equatable", "volume"]
 - ["PSs9Equatable", ""]
+- !private ["PSs9ErrorType", "init"]
 - !private ["PSs9ErrorType", "localizedDescription"]
 - !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
@@ -648,9 +678,12 @@ depends-member:
 - !private ["PSs8Hashable", "AVAudioPlayer"]
 - !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "Double"]
+- !private ["PSs8Hashable", "InfiniteMusic"]
 - !private ["PSs8Hashable", "Int"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSBundle"]
+- !private ["PSs8Hashable", "NSError"]
+- !private ["PSs8Hashable", "NSLocalizedDescriptionKey"]
 - !private ["PSs8Hashable", "UInt32"]
 - !private ["PSs8Hashable", "URLForResource"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
@@ -706,6 +739,7 @@ depends-member:
 - ["PSs8Hashable", "gsharpmajorscale"]
 - ["PSs8Hashable", "gsharpminor"]
 - ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "initAudioPlayer"]
 - ["PSs8Hashable", "initialized"]
 - ["PSs8Hashable", "keyamajor"]
 - ["PSs8Hashable", "keyaminor"]
@@ -728,7 +762,6 @@ depends-member:
 - ["PSs8Hashable", "keygsharpmajor"]
 - ["PSs8Hashable", "keys"]
 - !private ["PSs8Hashable", "localizedDescription"]
-- !private ["PSs8Hashable", "mainBundle"]
 - ["PSs8Hashable", "nextMelodyNote"]
 - !private ["PSs8Hashable", "pause"]
 - !private ["PSs8Hashable", "play"]
@@ -747,7 +780,9 @@ depends-member:
 - ["PSs9Indexable", "Element"]
 - !private ["PSs9Indexable", "Generator"]
 - !private ["PSs9Indexable", "Index"]
+- !private ["PSs9Indexable", "Key"]
 - !private ["PSs9Indexable", "SubSequence"]
+- !private ["PSs9Indexable", "Value"]
 - !private ["PSs9Indexable", "_Element"]
 - !private ["PSs9Indexable", "count"]
 - !private ["PSs9Indexable", "subscript"]
@@ -756,9 +791,11 @@ depends-member:
 - ["C15InfiniteMarimba13InfiniteMusic", "Array"]
 - ["C15InfiniteMarimba13InfiniteMusic", "Bool"]
 - !private ["C15InfiniteMarimba13InfiniteMusic", "Double"]
+- !private ["C15InfiniteMarimba13InfiniteMusic", "InfiniteMusic"]
 - ["C15InfiniteMarimba13InfiniteMusic", "Int"]
 - !private ["C15InfiniteMarimba13InfiniteMusic", "NSBundle"]
 - ["C15InfiniteMarimba13InfiniteMusic", "NSError"]
+- !private ["C15InfiniteMarimba13InfiniteMusic", "NSLocalizedDescriptionKey"]
 - ["C15InfiniteMarimba13InfiniteMusic", "String"]
 - !private ["C15InfiniteMarimba13InfiniteMusic", "UInt32"]
 - ["C15InfiniteMarimba13InfiniteMusic", "amajor"]
@@ -813,6 +850,7 @@ depends-member:
 - ["C15InfiniteMarimba13InfiniteMusic", "gsharpmajorscale"]
 - ["C15InfiniteMarimba13InfiniteMusic", "gsharpminor"]
 - ["C15InfiniteMarimba13InfiniteMusic", "init"]
+- !private ["C15InfiniteMarimba13InfiniteMusic", "initAudioPlayer"]
 - ["C15InfiniteMarimba13InfiniteMusic", "initialized"]
 - ["C15InfiniteMarimba13InfiniteMusic", "keyamajor"]
 - ["C15InfiniteMarimba13InfiniteMusic", "keyaminor"]
@@ -881,20 +919,23 @@ depends-member:
 - !private ["PSs16MutableSliceable", "count"]
 - !private ["PSs16MutableSliceable", "subscript"]
 - !private ["CSo8NSBundle", "URLForResource"]
-- !private ["CSo8NSBundle", "mainBundle"]
+- !private ["CSo8NSBundle", "init"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "localizedDescription"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "localizedDescription"]
+- !private ["CSo7NSError", "init"]
 - !private ["CSo7NSError", "localizedDescription"]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AVAudioPlayer"]
 - ["CSo8NSObject", "Array"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Double"]
+- !private ["CSo8NSObject", "InfiniteMusic"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "NSBundle"]
 - ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSLocalizedDescriptionKey"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UInt32"]
 - !private ["CSo8NSObject", "URLForResource"]
@@ -950,6 +991,7 @@ depends-member:
 - ["CSo8NSObject", "gsharpmajorscale"]
 - ["CSo8NSObject", "gsharpminor"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "initAudioPlayer"]
 - ["CSo8NSObject", "initialized"]
 - ["CSo8NSObject", "keyamajor"]
 - ["CSo8NSObject", "keyaminor"]
@@ -972,7 +1014,6 @@ depends-member:
 - ["CSo8NSObject", "keygsharpmajor"]
 - ["CSo8NSObject", "keys"]
 - !private ["CSo8NSObject", "localizedDescription"]
-- !private ["CSo8NSObject", "mainBundle"]
 - ["CSo8NSObject", "nextMelodyNote"]
 - !private ["CSo8NSObject", "pause"]
 - !private ["CSo8NSObject", "play"]
@@ -990,8 +1031,11 @@ depends-member:
 - ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "AVAudioPlayer"]
 - !private ["PSo16NSObjectProtocol", "Double"]
+- !private ["PSo16NSObjectProtocol", "InfiniteMusic"]
 - !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "NSBundle"]
+- !private ["PSo16NSObjectProtocol", "NSError"]
+- !private ["PSo16NSObjectProtocol", "NSLocalizedDescriptionKey"]
 - !private ["PSo16NSObjectProtocol", "UInt32"]
 - !private ["PSo16NSObjectProtocol", "URLForResource"]
 - ["PSo16NSObjectProtocol", "amajor"]
@@ -1046,6 +1090,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "gsharpmajorscale"]
 - ["PSo16NSObjectProtocol", "gsharpminor"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "initAudioPlayer"]
 - ["PSo16NSObjectProtocol", "initialized"]
 - ["PSo16NSObjectProtocol", "keyamajor"]
 - ["PSo16NSObjectProtocol", "keyaminor"]
@@ -1068,7 +1113,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "keygsharpmajor"]
 - ["PSo16NSObjectProtocol", "keys"]
 - !private ["PSo16NSObjectProtocol", "localizedDescription"]
-- !private ["PSo16NSObjectProtocol", "mainBundle"]
 - ["PSo16NSObjectProtocol", "nextMelodyNote"]
 - !private ["PSo16NSObjectProtocol", "pause"]
 - !private ["PSo16NSObjectProtocol", "play"]
@@ -1104,7 +1148,9 @@ depends-member:
 - ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
 - !private ["PSs12SequenceType", "Index"]
+- !private ["PSs12SequenceType", "Key"]
 - !private ["PSs12SequenceType", "SubSequence"]
+- !private ["PSs12SequenceType", "Value"]
 - !private ["PSs12SequenceType", "_Element"]
 - !private ["PSs12SequenceType", "count"]
 - !private ["PSs12SequenceType", "subscript"]
@@ -1122,6 +1168,7 @@ depends-member:
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "init"]
+- !private ["SS", "deinit"]
 - !private ["SS", "init"]
 - !private ["PSs30StringInterpolationConvertible", "init"]
 - !private ["PSs24StringLiteralConvertible", "init"]
@@ -1173,7 +1220,9 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "Generator"]
 - !private ["PSs21_ObjectiveCBridgeable", "Index"]
 - !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["PSs21_ObjectiveCBridgeable", "Key"]
 - !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["PSs21_ObjectiveCBridgeable", "Value"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
@@ -1186,8 +1235,10 @@ depends-member:
 - !private ["PSs12_Reflectable", "Generator"]
 - !private ["PSs12_Reflectable", "Index"]
 - !private ["PSs12_Reflectable", "IntegerLiteralType"]
+- !private ["PSs12_Reflectable", "Key"]
 - ["PSs12_Reflectable", "Some"]
 - !private ["PSs12_Reflectable", "SubSequence"]
+- !private ["PSs12_Reflectable", "Value"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "count"]
 - !private ["PSs12_Reflectable", "init"]
@@ -1217,6 +1268,8 @@ depends-nominal:
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
+- !private "VSs10Dictionary"
+- !private "PSs28DictionaryLiteralConvertible"
 - !private "Sd"
 - "PSs9Equatable"
 - !private "PSs9ErrorType"
@@ -1295,6 +1348,7 @@ depends-nominal:
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
 depends-dynamic-lookup:
+- !private "init"
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
 - "/Users/blisschapman/Developer/iOS/InfiniteMarimbaLibrary/InfiniteMarimba/InfiniteMarimba.h"
@@ -1309,4 +1363,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreAudio.swiftmodule"
-interface-hash: "b8189a6d5402e9dc868b872ca79ce82f"
+interface-hash: "1e614c0e3a2ab6a611e83a654cc6ee5f"

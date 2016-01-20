@@ -25,9 +25,15 @@ class testMusic: XCTestCase {
         var i = 0
         while i < 10 {
             let note = infiniteMarimba.nextMelodyNote()
-            infiniteMarimba.playNote(note)
+            do {
+                try infiniteMarimba.playNote(note)
+            } catch {
+                debugPrint(error)
+                assert(false)
+            }
             i = i+1
         }
+        assert(true)
     }
     
 

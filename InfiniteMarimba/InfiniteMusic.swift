@@ -15,25 +15,31 @@ class InfiniteMusic : NSObject, AVAudioPlayerDelegate {
     var initialized = false
     var progressionInt : Int = 0
     
+    
     func playNote(note: String) throws {
-        guard let fileURL = NSBundle.mainBundle().URLForResource(note, withExtension: ".m4a") else {
-            print("Failed to find resource for note: \(note)")
-            return
+        do {
+            try initAudioPlayer(withNote: note)
+            
+            avPlayer?.delegate = self
+            avPlayer?.prepareToPlay()
+            avPlayer?.volume = 1.0
+            avPlayer?.play()
+        } catch {
+            throw error
         }
-        
-        print("Found resource for note: \(note) at: \(fileURL)")
+    }
+    
+    private func initAudioPlayer(withNote note: String) throws {
+        guard let fileURL = NSBundle(forClass: InfiniteMusic.self).URLForResource(note, withExtension: ".m4a") else {
+            let error = NSError(domain: "InfiniteMusic-initAudioPlayer", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to create path to note: \(note)"])
+            throw error
+        }
         
         do {
             try avPlayer = AVAudioPlayer(contentsOfURL: fileURL)
         } catch {
-            print("could not create AVAudioPlayer \(error)")
-            return
+            throw error
         }
-        
-        avPlayer!.delegate = self
-        avPlayer!.prepareToPlay()
-        avPlayer!.volume = 1.0
-        avPlayer?.play()
     }
     
     func chooseProgression() {
